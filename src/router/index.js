@@ -8,22 +8,37 @@ const routes = [
     component: Modal,
     meta: { transition: 'slide-left' },
   },
+
   {
     path: '/list',
     name: 'List',
     component: () => import(/* webpackChunkName: "list" */ '../views/List.vue'),
     meta: { transition: 'slide-up' },
   },
+
   {
     path: '/drawer',
     name: 'Drawer',
     component: () => import(/* webpackChunkName: "drawer" */ '../views/Drawer.vue'),
-    meta: { transition: 'slide-right' },
+    meta: { transition: 'none' },
   },
   {
     path: '/cards',
     name: 'Cards',
     component: () => import(/* webpackChunkName: "cards" */ '../views/Cards.vue'),
+    meta: { transition: 'none' },
+  },
+
+  {
+    path: '/simple',
+    name: 'Simple',
+    component: () => import(/* webpackChunkName: "simple" */ '../views/Simple.vue'),
+    meta: { transition: 'none' },
+  },
+  {
+    path: '/stagger',
+    name: 'Stagger',
+    component: () => import(/* webpackChunkName: "stagger" */ '../views/Stagger.vue'),
     meta: { transition: 'none' },
   }
 ]

@@ -1,9 +1,11 @@
 <template>
 <div id="nav">
-    <router-link to="/modal">Modal</router-link> |
-    <router-link to="/list">List</router-link> |
-    <router-link to="/drawer">Drawer</router-link> |
-    <router-link to="/cards">Cards</router-link>
+    <router-link to="/modal">Modal - Transitions</router-link> |
+    <router-link to="/list">List - Group transitions</router-link> |
+    <router-link to="/drawer">Drawer - Hooks</router-link> |
+    <router-link to="/cards">Cards - Hooks</router-link> |
+    <router-link to="/simple">Simple - Intro to GSAP</router-link> |
+    <router-link to="/stagger">Stagger - Intro to GSAP</router-link>
 </div>
 
 <router-view v-slot="{ Component, route }">
