@@ -47,6 +47,13 @@ const routes = [
     component: () => import(/* webpackChunkName: "state-with-gsap" */ '@/views/State.vue'),
     meta: { transition: 'none' },
   },
+
+  {
+    path: '/timelines',
+    name: 'Timelines',
+    component: () => import(/* webpackChunkName: "timelines-with-gsap" */ '@/views/Timelines.vue'),
+    meta: { transition: 'none' },
+  },
 ]
 
 const router = createRouter({
