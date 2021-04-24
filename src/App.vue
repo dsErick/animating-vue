@@ -4,14 +4,16 @@
     <router-link to="/about">About</router-link>
 </div>
 
-<router-view v-slot="{ Component }">
-    <transition name="slide-fade" mode="out-in">
+<router-view v-slot="{ Component, route }">
+    <transition :name="route.meta.transition || 'slide-fade'" mode="out-in">
         <component :is="Component" />
     </transition>
 </router-view>
 </template>
 
 <style>
+@import 'assets/css/transitions.css';
+
 #app {
     font-family: Avenir, Helvetica, Arial, sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -48,35 +50,5 @@ button {
 
 button:hover {
     transform: scale(1.01);
-}
-
-/*** TRANSITIONS ***/
-/* Fade */
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-}
-
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 235ms ease-out;
-}
-
-/* Slide fade */
-.slide-fade-enter-from {
-    opacity: 0;
-    transform: translateX(-10%);
-}
-
-.slide-fade-enter-active,
-.slide-fade-leave-active {
-    transition-property: opacity transform;
-    transition-duration: 235ms;
-    transition-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
-}
-
-.slide-fade-leave-to {
-    opacity: 0;
-    transform: translateX(10%);
 }
 </style>
