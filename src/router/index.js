@@ -9,6 +9,12 @@ const routes = [
     meta: { transition: 'slide-left' },
   },
   {
+    path: '/list',
+    name: 'List',
+    component: () => import(/* webpackChunkName: "list" */ '../views/List.vue'),
+    meta: { transition: 'slide-up' },
+  },
+  {
     path: '/about',
     name: 'About',
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),

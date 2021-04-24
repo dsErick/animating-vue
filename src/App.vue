@@ -1,6 +1,7 @@
 <template>
 <div id="nav">
     <router-link to="/modal">Modal</router-link> |
+    <router-link to="/list">List</router-link> |
     <router-link to="/about">About</router-link>
 </div>
 
@@ -50,5 +51,10 @@ button {
 
 button:hover {
     transform: scale(1.01);
+}
+
+.mx-1 {
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 </style>
