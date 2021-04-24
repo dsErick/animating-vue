@@ -15,10 +15,16 @@ const routes = [
     meta: { transition: 'slide-up' },
   },
   {
-    path: '/about',
-    name: 'About',
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
+    path: '/drawer',
+    name: 'Drawer',
+    component: () => import(/* webpackChunkName: "drawer" */ '../views/Drawer.vue'),
     meta: { transition: 'slide-right' },
+  },
+  {
+    path: '/cards',
+    name: 'Cards',
+    component: () => import(/* webpackChunkName: "cards" */ '../views/Cards.vue'),
+    meta: { transition: 'none' },
   }
 ]
 
