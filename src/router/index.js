@@ -54,6 +54,13 @@ const routes = [
     component: () => import(/* webpackChunkName: "timelines-with-gsap" */ '@/views/Timelines.vue'),
     meta: { transition: 'none' },
   },
+
+  {
+    path: '/master',
+    name: 'Master',
+    component: () => import(/* webpackChunkName: "nested-timelines" */ '@/views/Master.vue'),
+    meta: { transition: 'none' },
+  },
 ]
 
 const router = createRouter({
