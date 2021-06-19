@@ -1,9 +1,14 @@
 <template>
-<div>
-    <div :style="{ width: `${tweenedNumber}px` }" class="bar">
+<div class="container">
+    <div :style="{ width: `${tweenedNumber}px`, height: `${tweenedNumber / 3}px` }" class="bar">
         <span>{{ tweenedNumber.toFixed(0) }}</span>
     </div>
+    <div class="bar">
+        <span>Teste</span>
+    </div>
 </div>
+
+<div class="other-container"></div>
 </template>
 
 <script>
@@ -37,13 +42,30 @@ export default {
 </script>
 
 <style scoped>
+.container {
+    display: flex;
+    align-items: center;
+}
 .bar {
     padding: 5px;
     background-color: #2c3e50;
     border: 1px #16c0b0 solid;
-    min-width: 20px;
+    min-width: 1em;
+    min-height: 1em;
+    display: inline-block;
+}
+.bar:last-of-type {
+    margin-left: 1rem;
+    flex: 1 0;
 }
 .bar span {
     color: white;
+}
+
+.other-container {
+    height: 20rem;
+    margin-top: 1rem;
+    background-color: #2c3e50;
+    border: 1px #16c0b0 solid;
 }
 </style>
