@@ -61,6 +61,13 @@ const routes = [
     component: () => import(/* webpackChunkName: "nested-timelines" */ '@/views/Master.vue'),
     meta: { transition: 'none' },
   },
+
+  {
+    path: '/collapse',
+    name: 'Collapse',
+    component: () => import(/* webpackChunkName: "testing-collapse" */ '@/views/Collapse.vue'),
+    meta: { transition: 'none' },
+  },
 ]
 
 const router = createRouter({

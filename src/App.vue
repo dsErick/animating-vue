@@ -8,7 +8,8 @@
     <router-link to="/stagger">Stagger - Intro to GSAP</router-link> |
     <router-link to="/state">State - State with GSAP</router-link> |
     <router-link to="/timelines">Timelines - Timelines with GSAP</router-link> |
-    <router-link to="/master">Master - Nested Timelines</router-link>
+    <router-link to="/master">Master - Nested Timelines</router-link> |
+    <router-link to="/collapse">Collapse - Testing collapse effect</router-link>
 </div>
 
 <router-view v-slot="{ Component, route }">
